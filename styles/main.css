@@ -64,24 +64,25 @@ button:focus:-ms-input-placeholder {
 .wrapper {
   font-family: Verdana, sans-serif;
   font-size: 14px;
+  line-height: 1;
 }
 
-/* line 16, ../scss/main/main.scss */
+/* line 17, ../scss/main/main.scss */
 header {
   background-color: #101010;
   padding: 20px 0;
 }
-/* line 20, ../scss/main/main.scss */
+/* line 21, ../scss/main/main.scss */
 header .container {
   justify-content: space-between;
   align-items: center;
 }
-/* line 24, ../scss/main/main.scss */
+/* line 25, ../scss/main/main.scss */
 header .container .logo {
   width: 120px;
   height: 50px;
 }
-/* line 28, ../scss/main/main.scss */
+/* line 29, ../scss/main/main.scss */
 header .container .logo a {
   display: block;
   height: 100%;
@@ -90,13 +91,13 @@ header .container .logo a {
   color: #fff;
   font-size: 40px;
 }
-/* line 36, ../scss/main/main.scss */
+/* line 37, ../scss/main/main.scss */
 header .container .logo a:hover {
   color: #5ebefb;
   border-color: #5ebefb;
   transition: 0.2s;
 }
-/* line 44, ../scss/main/main.scss */
+/* line 45, ../scss/main/main.scss */
 header .container .nav {
   display: -webkit-flex;
   display: -moz-flex;
@@ -105,23 +106,23 @@ header .container .nav {
   display: flex;
   justify-content: space-between;
 }
-/* line 48, ../scss/main/main.scss */
+/* line 49, ../scss/main/main.scss */
 header .container .nav li {
   display: block;
   margin-right: 20px;
 }
-/* line 52, ../scss/main/main.scss */
+/* line 53, ../scss/main/main.scss */
 header .container .nav li a {
   color: #fff;
   font-size: 18px;
   line-height: 50px;
 }
-/* line 57, ../scss/main/main.scss */
+/* line 58, ../scss/main/main.scss */
 header .container .nav li a:hover {
   color: #5ebefb;
   transition: 0.2s;
 }
-/* line 65, ../scss/main/main.scss */
+/* line 66, ../scss/main/main.scss */
 header .container .log-in-section {
   display: -webkit-flex;
   display: -moz-flex;
@@ -129,7 +130,7 @@ header .container .log-in-section {
   display: -o-flex;
   display: flex;
 }
-/* line 68, ../scss/main/main.scss */
+/* line 69, ../scss/main/main.scss */
 header .container .log-in-section button {
   width: 80px;
   height: 44px;
@@ -139,13 +140,13 @@ header .container .log-in-section button {
   cursor: pointer;
   outline: none;
 }
-/* line 77, ../scss/main/main.scss */
+/* line 78, ../scss/main/main.scss */
 header .container .log-in-section button:hover {
   color: #5ebefb;
   border-color: #5ebefb;
   transition: 0.2s;
 }
-/* line 84, ../scss/main/main.scss */
+/* line 85, ../scss/main/main.scss */
 header .container .log-in-section p {
   display: -webkit-flex;
   display: -moz-flex;
@@ -156,7 +157,7 @@ header .container .log-in-section p {
   margin-left: 20px;
   color: #fff;
 }
-/* line 90, ../scss/main/main.scss */
+/* line 91, ../scss/main/main.scss */
 header .container .log-in-section p:before {
   content: '\f2be';
   display: block;
@@ -167,26 +168,26 @@ header .container .log-in-section p:before {
   font-size: 35px;
 }
 
-/* line 104, ../scss/main/main.scss */
+/* line 105, ../scss/main/main.scss */
 footer {
   background-color: #1c1c1c;
   padding: 50px 0 30px 0;
 }
-/* line 108, ../scss/main/main.scss */
+/* line 109, ../scss/main/main.scss */
 footer .above-line-block {
   padding-bottom: 50px;
 }
-/* line 111, ../scss/main/main.scss */
+/* line 112, ../scss/main/main.scss */
 footer .above-line-block .container {
   justify-content: space-between;
 }
-/* line 115, ../scss/main/main.scss */
+/* line 116, ../scss/main/main.scss */
 footer .above-line-block .container .dropdown-block .dropdown-block-item {
   width: 200px;
   height: 40px;
   margin-bottom: 10px;
 }
-/* line 122, ../scss/main/main.scss */
+/* line 123, ../scss/main/main.scss */
 footer .above-line-block .container .dropdown-block .select a {
   display: block;
   height: 100%;
@@ -195,12 +196,12 @@ footer .above-line-block .container .dropdown-block .select a {
   line-height: 40px;
   color: #bfbfbf;
 }
-/* line 130, ../scss/main/main.scss */
+/* line 131, ../scss/main/main.scss */
 footer .above-line-block .container .dropdown-block .select a:hover {
   background-color: #5e5e5e;
   transition: 0.2s;
 }
-/* line 137, ../scss/main/main.scss */
+/* line 138, ../scss/main/main.scss */
 footer .above-line-block .container .dropdown-block input {
   background-color: #2b2b2b;
   padding-left: 11px;
@@ -208,35 +209,35 @@ footer .above-line-block .container .dropdown-block input {
   font-family: Verdana, sans-serif;
   color: #fff;
 }
-/* line 147, ../scss/main/main.scss */
+/* line 148, ../scss/main/main.scss */
 footer .above-line-block .container .get-on {
   align-self: center;
 }
-/* line 150, ../scss/main/main.scss */
+/* line 151, ../scss/main/main.scss */
 footer .above-line-block .container .get-on li {
   display: inline-block;
   width: 120px;
   height: 40px;
   margin-right: 15px;
 }
-/* line 156, ../scss/main/main.scss */
+/* line 157, ../scss/main/main.scss */
 footer .above-line-block .container .get-on li a {
   display: block;
   height: 100%;
   background: url("../images/google-play.png") no-repeat;
   background-size: 100%;
 }
-/* line 165, ../scss/main/main.scss */
+/* line 166, ../scss/main/main.scss */
 footer .above-line-block .container .round-footer-icons {
   align-self: flex-end;
 }
-/* line 168, ../scss/main/main.scss */
+/* line 169, ../scss/main/main.scss */
 footer .above-line-block .container .round-footer-icons li {
   display: inline-block;
   width: 32px;
   height: 32px;
 }
-/* line 173, ../scss/main/main.scss */
+/* line 174, ../scss/main/main.scss */
 footer .above-line-block .container .round-footer-icons li a {
   display: block;
   height: 100%;
@@ -247,20 +248,20 @@ footer .above-line-block .container .round-footer-icons li a {
   text-align: center;
   line-height: 32px;
 }
-/* line 183, ../scss/main/main.scss */
+/* line 184, ../scss/main/main.scss */
 footer .above-line-block .container .round-footer-icons li a:hover {
   background-color: #8a8a8a;
 }
-/* line 192, ../scss/main/main.scss */
+/* line 193, ../scss/main/main.scss */
 footer .under-line-block {
   border-top: 1px solid #292929;
   padding-top: 25px;
 }
-/* line 196, ../scss/main/main.scss */
+/* line 197, ../scss/main/main.scss */
 footer .under-line-block .container {
   justify-content: space-between;
 }
-/* line 199, ../scss/main/main.scss */
+/* line 200, ../scss/main/main.scss */
 footer .under-line-block .container .copyright {
   display: -webkit-flex;
   display: -moz-flex;
@@ -268,24 +269,24 @@ footer .under-line-block .container .copyright {
   display: -o-flex;
   display: flex;
 }
-/* line 202, ../scss/main/main.scss */
+/* line 203, ../scss/main/main.scss */
 footer .under-line-block .container .copyright p {
   color: #bfbfbf;
 }
-/* line 206, ../scss/main/main.scss */
+/* line 207, ../scss/main/main.scss */
 footer .under-line-block .container .copyright li {
   margin-left: 30px;
 }
-/* line 208, ../scss/main/main.scss */
+/* line 209, ../scss/main/main.scss */
 footer .under-line-block .container .copyright li a {
   color: #bfbfbf;
 }
-/* line 211, ../scss/main/main.scss */
+/* line 212, ../scss/main/main.scss */
 footer .under-line-block .container .copyright li a:hover {
   color: #5ebefb;
   transition: 0.2s;
 }
-/* line 219, ../scss/main/main.scss */
+/* line 220, ../scss/main/main.scss */
 footer .under-line-block .container .footer-links-right-corner {
   display: -webkit-flex;
   display: -moz-flex;
@@ -293,16 +294,98 @@ footer .under-line-block .container .footer-links-right-corner {
   display: -o-flex;
   display: flex;
 }
-/* line 222, ../scss/main/main.scss */
+/* line 223, ../scss/main/main.scss */
 footer .under-line-block .container .footer-links-right-corner li {
   margin-left: 30px;
 }
-/* line 224, ../scss/main/main.scss */
+/* line 225, ../scss/main/main.scss */
 footer .under-line-block .container .footer-links-right-corner li a {
   color: #bfbfbf;
 }
-/* line 227, ../scss/main/main.scss */
+/* line 228, ../scss/main/main.scss */
 footer .under-line-block .container .footer-links-right-corner li a:hover {
   color: #5ebefb;
   transition: 0.2s;
+}
+
+/* line 239, ../scss/main/main.scss */
+.home {
+  border-top: 1px solid #353535;
+}
+/* line 242, ../scss/main/main.scss */
+.home .search {
+  background-color: #101010;
+  padding-top: 160px;
+  padding-bottom: 270px;
+  color: #fff;
+}
+/* line 248, ../scss/main/main.scss */
+.home .search .container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 253, ../scss/main/main.scss */
+.home .search .container h3 {
+  font-size: 70px;
+  font-weight: lighter;
+  position: relative;
+}
+/* line 258, ../scss/main/main.scss */
+.home .search .container h3:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: #a8a8a8;
+  bottom: 0;
+}
+/* line 270, ../scss/main/main.scss */
+.home .search .container p {
+  font-size: 24px;
+  margin-top: 10px;
+}
+/* line 275, ../scss/main/main.scss */
+.home .search .container input {
+  height: 60px;
+  width: 710px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  border: 2px solid #a7a7a7;
+  background-color: #101010;
+}
+/* line 284, ../scss/main/main.scss */
+.home .search .container button {
+  height: 64px;
+  width: 64px;
+  position: relative;
+  left: calc(50% - 32px);
+  border-radius: 50%;
+  background-color: #a2a2a2;
+  color: #fff;
+  font-size: 25px;
+}
+
+/* line 298, ../scss/main/main.scss */
+.main-logo {
+  background-color: #fff;
+  padding-top: 215px;
+  padding-bottom: 235px;
+}
+/* line 303, ../scss/main/main.scss */
+.main-logo .container {
+  flex-direction: column;
+  text-align: center;
+}
+/* line 307, ../scss/main/main.scss */
+.main-logo .container p {
+  font-size: 44px;
+  margin-bottom: 120px;
+}
+/* line 312, ../scss/main/main.scss */
+.main-logo .container h1 {
+  font-size: 100px;
+  font-weight: 200;
+  text-shadow: 3px 3px 3px #b6b6b6;
 }

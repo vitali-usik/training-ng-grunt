@@ -8,10 +8,13 @@ angular.module('wireframeApp', ['ui.router'])
       url:'/',
       views: {
         'header': {
-          templateUrl : 'views/header.html',
+          templateUrl: 'views/header.html',
         },
         'footer': {
-          templateUrl : 'views/footer.html'
+          templateUrl: 'views/footer.html'
+        },
+        'content': {
+          templateUrl: 'views/home.html'
         }
       }
     });
