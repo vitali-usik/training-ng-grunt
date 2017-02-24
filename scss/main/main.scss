@@ -1,0 +1,19 @@
+@import "../components/variables";
+@import "../components/reset";
+@import "../components/mixin";
+
+.container {
+  @include flexbox;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+@import "header";
+@import "footer";
+@import "home";
