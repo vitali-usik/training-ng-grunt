@@ -2,6 +2,7 @@
 
 angular.module('wireframeApp', ['ui.router'])
   .config(function($stateProvider, $urlRouterProvider) {
+    
     $stateProvider
 
     .state('app', {
@@ -17,7 +18,18 @@ angular.module('wireframeApp', ['ui.router'])
           templateUrl: 'views/home.html'
         }
       }
+    })
+
+    .state ('app.gallery', {
+      url:'gallery',
+      views: {
+        'content@': {
+          templateUrl: 'views/gallery.html',
+          controller: 'GuitarGalleryController'
+        }
+      }
     });
+
     $urlRouterProvider.otherwise('/');
   })
 ;
