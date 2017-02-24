@@ -1,0 +1,25 @@
+@import "../components/variables";
+@import "../components/reset";
+@import "../components/mixin";
+@import "../components/fonts";
+
+.container {
+  @include flexbox;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-size: normal;
+}
+
+
+
+@import "header";
+@import "footer";
+@import "home";
+@import "gallery";
+

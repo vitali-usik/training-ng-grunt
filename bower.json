@@ -1,0 +1,27 @@
+{
+  "name": "Wireframe",
+  "version": "1.0.0",
+  "description": "Wireframe page",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "Wireframe"
+  ],
+  "authors": [
+    "Igor Sinyak"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "font-awesome": "^4.7.0",
+    "angular-ui-router": "^0.4.2"
+  }
+}
