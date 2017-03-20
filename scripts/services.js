@@ -193,5 +193,4 @@ angular.module('wireframeApp')
     };
 
     return guitarsFactory;
-  });
-
+});

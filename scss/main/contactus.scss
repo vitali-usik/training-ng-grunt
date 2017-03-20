@@ -1,0 +1,298 @@
+.contactus {
+  .container {
+    .left-column {
+      padding-top: 260px;
+
+      .select-list {
+        li {
+          border-bottom: 1px solid #d0d0d0;
+
+          &:last-of-type {
+            border-bottom: none;
+          }
+
+          a {
+            position: relative;
+            display: block;
+            padding: 30px 70px 30px 0;
+            font-size: 16px;
+            font-weight: 200;
+            color: #898989;      
+
+            &:hover,
+            &.active {
+              color: #000;
+
+              &:before,
+              &:after {
+                content: ''; 
+                position: absolute;
+                border: 10px solid transparent;
+                border-left: 10px solid #d0d0d0;
+                right: -21px;
+                top: calc(50%-6px);
+              }
+              
+              &:after {
+                border-left: 10px solid #fff;
+                right: -20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-column {
+      padding: 40px 0 35px 80px;
+      border-left: 1px solid #d0d0d0;
+      color: #898989;
+
+      .input-column,
+      .title-column,
+      .input-block {
+        @include flexbox;
+      }
+
+      .title-column {
+        width: 170px;
+        align-items: center;
+      }
+
+      .input-column {
+        flex-wrap: wrap;
+        align-items: center;
+        width: 545px;
+      }
+
+      .input-block {
+        margin-bottom: 30px;
+
+        .has-error {
+          border-color: #e82626;
+        }
+
+        .error-message {
+          font-size: 14px;
+          color: #e82626;
+        }
+      }
+
+      button {
+        height: 50px;
+        background-color: #ededed;
+        font-size: 16px;
+        font-weight: 200;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken(#ededed, 20%);
+          transition: 0.2s;
+        }
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 200;
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: 200;
+      }
+
+      input[type="text"],
+      input[type="email"]
+       {
+        @include input-styles;
+        height: 50px;
+        width: 100%;
+        outline: none;
+      }
+
+      select {
+        @include input-styles;
+        position: relative;
+        height: 50px;
+        width: 200px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+        cursor: pointer;
+        background: url('../images/select-arrow.png') no-repeat;
+        background-position: center right 8px;
+      }
+
+      textarea {
+        @include input-styles;
+        padding-top: 15px;
+        width: 100%;
+        resize: none;
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+      .photo-block {
+        input {
+          display: none;
+        }
+        label {
+          display: block;
+          cursor: pointer;
+
+          .photo-wrap {
+            @include flexbox;
+            width: 115px;
+            height: 115px;
+            border: 1px solid #c3c3c3;
+            border-radius: 50%;
+
+            img {
+              display: block;
+              width: 96px;
+              height: 96px;
+              margin: auto;
+              border-radius: 50%;
+              background: #c3c3c3 url('../images/bg-plus.png') center center no-repeat;
+            }
+          }
+        }
+      }
+
+      .sit-block {
+        #sit-xxx,
+        #sit-xxxx {
+          width: 150px;
+        }
+
+        #sit-xx {
+          width: 120px;
+        }
+
+        select {
+          margin-right: 10px;
+        }
+      }
+
+      .sex-block {
+        label {
+          margin-right: 30px;
+          margin-left: 5px;
+        }
+      }
+
+      .lorem-select1-block,
+      .lorem-select2-block {
+        select {
+          width: 100%;
+        }
+      }
+
+      .nickname-block,
+      .phone-block {
+        input {
+          width: 440px;
+          margin-right: 10px;
+        }
+
+        button {
+          width: 95px;
+        }
+      }
+
+      .email-block {
+        #email {
+          width: 440px;
+          margin-bottom: 10px;
+        }
+
+        label {
+          display: block;
+          width: 41px;
+          height: 41px;
+          margin-left: 10px;
+          margin-top: -10px;
+          background-image: url('../images/email-check.png');
+        }
+
+        .email-accept {
+          background-image: url('../images/email-check-checked.png');
+        }
+
+        #otp {
+          width: 140px;
+          margin-right: 10px;
+        }
+
+        #submit-otp,
+        #resend-otp {
+          padding: 0 15px;
+          margin-right: 10px;
+        }
+      }
+
+      .phone-number-block {
+        #phone {
+          width: 440px;
+          margin-right: 10px;
+        }
+
+        button {
+          width: 95px;
+        }
+      }
+
+      .lorem-select3-block,
+      .lorem-select5-block {
+        .input-column {
+          justify-content: space-between;
+        }
+      }
+
+      .who-is-better-block {
+        label {
+          margin-right: 30px;
+          margin-left: 5px;
+        }
+      }
+
+      .load-image-block {
+        input {
+          display: none;
+        }
+        label {
+          cursor: pointer;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+
+      .submit-form {
+        width: 120px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        background-color: #28df60;
+
+        &:hover {
+          background-color: #28df60;
+          color: #000;
+        }
+      }
+
+      .disabled-submit-button {
+        background-color: #a0a0a0;
+
+        &:hover {
+          background-color: #a0a0a0;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.email-error-messages {
+  width: 100%;
+  margin-bottom: 10px;
+}
