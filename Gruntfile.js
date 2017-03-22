@@ -36,13 +36,33 @@ module.exports = function(grunt) {
       options: {
         singleQuotes: true
       },
-      dist: {}
+      app: {
+        files: [
+          {
+            expand: true,
+            cwd: 'scripts',
+            src: '*.js',
+            dest: 'scripts',
+            ext: '.js',
+            extDot: 'last'
+          }
+        ]
+      }
+    },
+
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded',
+          sourcemap: 'none'
+        },
+        files: {
+          'styles/main.css':'scss/main/main.scss'
+        }
+      }
     },
 
     concat: {
-      options: {
-        separator: ';'
-      },
       dist: {}
     },
 
@@ -61,12 +81,14 @@ module.exports = function(grunt) {
         length: 20
       },
       release: {
-        files: [{
-          src: [
-            'dist/scripts/*.js',
-            'dist/styles/*.css'
-          ]
-        }]
+        files: [
+          {
+            src: [
+              'dist/scripts/*.js',
+              'dist/styles/*.css'
+            ]
+          }
+        ]
       }
     },
 
@@ -109,20 +131,68 @@ module.exports = function(grunt) {
       build: {
         src: ['dist/']
       }
-    }
+    },
+
+    watch: {
+      scripts: {
+        files: ['scripts/*.js'],
+        tasks: ['build']
+      },
+      styles: {
+        files: ['styles/*.css'],
+        tasks: ['build']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        },
+        files: [
+          '{,*/}*.html',
+          '.tmp/styles/{,*/}*.css',
+          'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+        ]
+      }
+    },
+
+    connect: {
+      options: {
+        port: 9000,
+        hostname: 'localhost',
+        livereload: 35729
+      },
+      dist: {
+        options: {
+          open: true,
+          base: {
+            path: 'dist',
+            options: {
+              index: 'index.html',
+              maxAge: 300000
+            }
+          }
+        }
+      }
+  }
   });
 
   grunt.registerTask('build', [
     'clean',
     'jshint',
-    'useminPrepare',
     'ngAnnotate',
+    'sass',
+    'useminPrepare',
     'concat',
     'uglify',
     'cssmin',
     'copy',
     'filerev',
     'usemin'
+  ]);
+
+  grunt.registerTask('serve', [
+    'build',
+    'connect:dist',
+    'watch'
   ]);
 
   grunt.registerTask('default',[

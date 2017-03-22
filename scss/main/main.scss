@@ -16,9 +16,9 @@
   font-size: normal;
 }
 
-@import "header";
-@import "footer";
-@import "home";
-@import "gallery";
-@import "contactus";
+@import "../views/header";
+@import "../views/footer";
+@import "../views/home";
+@import "../views/gallery";
+@import "../views/contactus";
 

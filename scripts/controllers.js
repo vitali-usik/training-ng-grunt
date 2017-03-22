@@ -46,15 +46,6 @@ angular.module('wireframeApp')
       loremInput4: '',
       loremInput5: '',
     };
-
-    $scope.formValid = true;
-
-    $scope.sendForm = function() {
-      console.log('wtf!!');
-      if($scope.contact.$invalid) {
-        $scope.formValid = false;
-      }
-  };
   }])
 
   .controller('FooterController', ['$scope', function($scope) {

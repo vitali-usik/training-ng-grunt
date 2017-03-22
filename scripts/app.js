@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('wireframeApp', ['ui.router'])
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
       .state('app', {
@@ -41,22 +41,22 @@ angular.module('wireframeApp', ['ui.router'])
     ;
 
     $urlRouterProvider.otherwise('/');
-  })
+  }])
 
   .directive('clickOut', ['$window', '$parse', function ($window, $parse) {
-        return {
-          restrict: 'A',
-          link: function (scope, element, attrs) {
-            var clickOutHandler = $parse(attrs.clickOut);
- 
-            angular.element($window).on('click', function (event) {
-              if (element[0].contains(event.target)){
-                return;
-              }
-              clickOutHandler(scope, {$event: event});
-              scope.$apply();
-            });
+    return {
+      restrict: 'A',
+      link: function (scope, element, attrs) {
+        var clickOutHandler = $parse(attrs.clickOut);
+
+        angular.element($window).on('click', function (event) {
+          if (element[0].contains(event.target)){
+            return;
           }
-        };
-      }])
+          clickOutHandler(scope, {$event: event});
+          scope.$apply();
+        });
+      }
+    };
+  }])
 ;
