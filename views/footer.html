@@ -1,19 +1,19 @@
-<footer ng-controller="FooterController">
+<footer data-ng-controller="FooterController">
   <div class="above-line-block">
     <div class="container">
       <div class="dropdown-block">
         <div class="input-field">
           <input type="text" class="dropdown-block-item" placeholder="Lorem">
         </div>
-        <div class="dropdown-select" click-out="showDropdown = false">
+        <div class="dropdown-select" data-click-out="showDropdown = false">
           <div class="select dropdown-block-item" >
-            <a href="" ng-click="dropdownToggle()">{{dropdownValue}}</a>
+            <a href="" data-ng-click="dropdownToggle()">{{dropdownValue}}</a>
           </div>
-          <ul class="options-list" ng-class="{'options-list-active': showDropdown}">
-            <li class="option"><a href="" ng-click="selectOption($event)">Option1</a></li>
-            <li class="option"><a href="" ng-click="selectOption($event)">Option2</a></li>
-            <li class="option"><a href="" ng-click="selectOption($event)">Option3</a></li>
-            <li class="option"><a href="" ng-click="selectOption($event)">Option4</a></li>
+          <ul class="options-list" data-ng-class="{'options-list-active': showDropdown}">
+            <li class="option"><a href="" data-ng-click="selectOption($event)">Option1</a></li>
+            <li class="option"><a href="" data-ng-click="selectOption($event)">Option2</a></li>
+            <li class="option"><a href="" data-ng-click="selectOption($event)">Option3</a></li>
+            <li class="option"><a href="" data-ng-click="selectOption($event)">Option4</a></li>
           </ul>
         </div>
         <div class="dropdown-select">

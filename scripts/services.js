@@ -193,4 +193,49 @@ angular.module('wireframeApp')
     };
 
     return guitarsFactory;
-});
+  })
+
+  .factory('contactFactory', function() {
+    var contactOptions = {};
+    var options_xxx = [123, 223, 555, 777, 888];
+    var options_xx = [12, 22, 55, 77, 88];
+    var options_xxxx = [1230, 2230, 5550, 7770, 8880];
+    var options1 = ['lorem1_1', 'lorem1_2', 'lorem1_3', 'lorem1_4'];
+    var options2 = ['lorem2_1', 'lorem2_2', 'lorem2_3', 'lorem2_4'];
+    var options3 = ['lorem3_1', 'lorem3_2', 'lorem3_3', 'lorem3_4'];
+    var options4 = ['lorem4_1', 'lorem4_2', 'lorem4_3', 'lorem4_4'];
+    var options5 = ['lorem5_1', 'lorem5_2', 'lorem5_3', 'lorem5_4'];
+    var options6 = ['lorem6_1', 'lorem6_2', 'lorem6_3', 'lorem6_4'];
+
+    contactOptions.getOptionsXXX = function() {
+      return options_xxx;
+    };
+    contactOptions.getOptionsXX = function() {
+      return options_xx;
+    };
+    contactOptions.getOptionsXXXX = function() {
+      return options_xxxx;
+    };
+    contactOptions.getOptions1 = function() {
+      return options1;
+    };
+    contactOptions.getOptions2 = function() {
+      return options2;
+    };
+    contactOptions.getOptions3 = function() {
+      return options3;
+    };
+    contactOptions.getOptions4 = function() {
+      return options4;
+    };
+    contactOptions.getOptions5 = function() {
+      return options5;
+    };
+    contactOptions.getOptions6 = function() {
+      return options6;
+    };
+
+    return contactOptions;
+
+  })
+;
