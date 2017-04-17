@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="wireframeApp">
+<html lang="en" data-ng-app="wireframeApp">
   <head>
     <meta charset="UTF-8">
     <title>Wireframe</title>
+<!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+<!-- endbuild -->
   </head>
   <body>
     <div class="wrapper">
-      <div ui-view="header"></div>
-      <div ui-view="content"></div>
-      <div ui-view="footer"></div>
+      <div data-ui-view="header"></div>
+      <div data-ui-view="content"></div>
+      <div data-ui-view="footer"></div>
     </div>
+<!-- build:js scripts/main.js -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/services.js"></script>
-    <script src="scripts/contollers.js"></script>
+    <script src="scripts/controllers.js"></script>
+<!-- endbuild -->
   </body>
 </html>

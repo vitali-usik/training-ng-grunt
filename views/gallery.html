@@ -1,0 +1,64 @@
+<div class="gallery-page" data-ng-controller="GuitarGalleryController">
+  <div class="gallery-title-section">
+    <div class="title-wrapper">
+      <h4>COURSE TITLE</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ducimus explicabo voluptate cum eveniet!</p>
+    </div>
+  </div>
+  <div class="filter-section">
+    <div class="guitar-brand-filter filter">
+      <input type="text" id="brand-name" data-ng-model="guitarFilter.filtByBrand" placeholder="Enter Brand Name">
+    </div>
+    <div class="guitar-multiscale-filter filter">
+      <p>
+        <span>Multiscale</span>
+        <input type="radio" name="multiscale" id="multiscale" value="true" data-ng-model="guitarFilter.filtByMultiscale">
+        <label for="multiscale">Yes</label>
+        <input type="radio" name="multiscale" id="singlescale" value="false" data-ng-model="guitarFilter.filtByMultiscale">
+        <label for="singlescale">No</label>
+      </p>
+    </div>
+    <div class="number-of-strings-filter filter">
+      <p>
+        <span>Number Of Strings</span>
+        <input type="radio" name="strings" id="6string" value="6" data-ng-model="guitarFilter.filtByStrings">
+        <label for="6string">6</label>
+        <input type="radio" name="strings" id="7string" value="7" data-ng-model="guitarFilter.filtByStrings">
+        <label for="7string">7</label>
+        <input type="radio" name="strings" id="8string" value="8" data-ng-model="guitarFilter.filtByStrings">
+        <label for="8string">8</label>
+      </p>
+    </div>
+    <div class="guitar-scale-filter filter">
+      <p>
+        <span>Scale</span>
+        <input id="scale-range" type="range" value="24.5" min="24.5" max="30" step="0.5" data-ng-model="guitarFilter.filtByScale">
+        <label for="scale-range">{{guitarFilter.filtByScale}}inch</label>
+      </p>
+    </div>
+    <div class="guitar-price-filter filter">
+      <p>
+        <span>Price</span>
+        <input id="price-range" type="range" value="10000" min="50" max="10000" step="50" data-ng-model="guitarFilter.filtByPrice">
+        <label for="price-range">{{guitarFilter.filtByPrice}}$</label>
+      </p>
+    </div>
+  </div>
+  <ul class="gallery">
+    <li class="gallery-list-item" data-ng-repeat="guitar in guitars | filter:{brand:guitarFilter.filtByBrand} | filter:{multiscale:guitarFilter.filtByMultiscale} | filter:{numberOfStrings:guitarFilter.filtByStrings}" data-ng-if="guitar.price <= guitarFilter.filtByPrice && guitar.scale >= guitarFilter.filtByScale">
+      <div class="guitar-image-wrapper">
+        <div class="like">
+          <a href="#"><i class="fa fa-heart-o"></i> LIKE</a>
+        </div>
+        <div class="price">${{guitar.price}}</div>
+        <img src="{{guitar.image}}" alt="{{guitar.image}}">
+      </div>
+      <h3>{{guitar.brand}} {{guitar.model}}</h3>
+      <p>{{shortDescription(guitar.description)}}</p>
+      <div class="rating">
+        <img ng-src="{{'images/' + guitar.rating + '-stars.png'}}" alt="{{guitar.rating +  'stars'}}">
+      </div>
+      <p>{{guitar.like}} likes</p>  
+    </li>
+  </ul>
+</div>

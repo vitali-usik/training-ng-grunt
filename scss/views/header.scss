@@ -1,5 +1,5 @@
 header {
-  background-color: $black-header-color;
+  background-color: #101010;
   padding: 20px 0;
 
   .container {
@@ -17,10 +17,11 @@ header {
         text-align: center;
         color: #fff;
         font-size: 40px;
+        line-height: 50px;
 
         &:hover {
-          color: $blue-hover-color;
-          border-color: $blue-hover-color;
+          color: #5ebefb;
+          border-color: #5ebefb;
           transition: 0.2s;
         }
       }
@@ -35,12 +36,12 @@ header {
         margin-right: 20px;
 
         a {
-          color: $white-color;
+          color: #fff;
           font-size: 18px;
           line-height: 50px;
 
           &:hover {
-            color: $blue-hover-color;
+            color: #5ebefb;
             transition: 0.2s;
           }
         }
@@ -53,15 +54,16 @@ header {
       button {
         width: 80px;
         height: 44px;
-        border: 1px solid $white-color;
-        background-color: $black-header-color;
-        color: $white-color;
+        border: 1px solid #fff;
+        background-color: #101010;
+        color: #fff;
         cursor: pointer;
         outline: none;
+        font-size: 14px;
 
         &:hover {
-          color: $blue-hover-color;
-          border-color: $blue-hover-color;
+          color: #5ebefb;
+          border-color: #5ebefb;
           transition: 0.2s;
         }
       }
@@ -78,7 +80,7 @@ header {
           margin-top: 5px;
           margin-right: 10px;
           font-family: FontAwesome;
-          color: $white-color;
+          color: #fff;
           font-size: 35px;
         }
       }

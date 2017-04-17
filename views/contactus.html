@@ -1,0 +1,233 @@
+<div class="contactus" data-ng-controller="ContactController">
+  <div class="container">
+    <div class="left-column">
+      <ul class="select-list">
+        <li class="select-item"><a href="#" class="active">Lorem Ipsum</a></li>
+        <li class="select-item"><a href="#">Loremipsum & Dolar Sit Dum</a></li>
+        <li class="select-item"><a href="#">Lorem Ipsum Dolar</a></li>
+        <li class="select-item"><a href="#">Lorem Ipsu</a></li>
+      </ul>
+    </div>
+    <div class="right-column">
+      <form class="contactus-form" name="contact" data-ng-submit="sendForm()" novalidate>
+        <div class="photo-block input-block">
+          <div class="title-column">
+            <span>Photo</span>  
+          </div>
+          <div class="input-column">
+            <input type="file" id="load-photo" name="load-photo" data-ng-model="contactForm.photo">
+            <label for="load-photo">
+              <div class="photo-wrap">
+                <img src="" alt="">
+              </div> 
+            </label>
+          </div>
+        </div>
+        <div class="firstname-block input-block">
+          <div class="title-column">
+            <span>FirstName</span>
+          </div>
+          <div class="input-column">
+            <input type="text" name="firstname" placeholder="FirstName" data-ng-model="contactForm.firstName" data-ng-class="{'has-error': contact.$submitted && contact.firstname.$pristine || contact.firstname.$error.required && !contact.firstname.$pristine}" required>
+            <span class="error-message" data-ng-show="contact.$submitted && contact.firstname.$pristine || contact.firstname.$error.required && !contact.firstname.$pristine">Required field!</span>
+          </div>
+        </div>
+        <div class="lastname-block input-block">
+          <div class="title-column">
+            <span>LastName</span>
+          </div>
+          <div class="input-column">
+            <input type="text" placeholder="LastName" name="lastname" data-ng-model="contactForm.lastName" data-ng-class="{'has-error': contact.$submitted && contact.lastname.$pristine || contact.lastname.$error.required && !contact.lastname.$pristine}" required>
+            <span class="error-message" data-ng-show="contact.$submitted && contact.lastname.$pristine || contact.lastname.$error.required && !contact.lastname.$pristine">Required field!</span>
+          </div>
+        </div>
+        <div class="sit-block input-block">
+          <div class="title-column">
+            <span>SIT</span>
+          </div>
+          <div class="input-column">
+            <select name="xxx" id="sit-xxx">
+              <option value="" selected="selected">xxx</option>
+              <option data-ng-repeat="option in options_xxx" value="{{option}}">{{option}}</option>
+            </select>
+            <select name="xx" id="sit-xx">
+              <option value="" selected="selected">xx</option>
+              <option data-ng-repeat="option in options_xx" value="{{option}}">{{option}}</option>
+            </select>
+            <select name="xxxx" id="sit-xxxx">
+              <option value="" selected="selected">xxxx</option>
+              <option data-ng-repeat="option in options_xxxx" value="{{option}}">{{option}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="sex-block input-block">
+          <div class="title-column">
+            <span>Sex</span>
+          </div>
+          <div class="input-column">
+            <input type="radio" name="sex" value="male" id="male" data-ng-model="contactForm.sex">
+            <label for="male">Male</label>
+            <input type="radio" name="sex" value="female" id="female" data-ng-model="contactForm.sex">
+            <label for="male">Female</label>
+            <input type="radio" name="sex" value="middle" id="middle" data-ng-model="contactForm.sex">
+            <label for="male">Middle</label>
+          </div>
+        </div>
+        <div class="lorem-select1-block input-block">
+          <div class="title-column">
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="input-column">
+            <select name="lorem-select1" id="lorem-select1" data-ng-model="contactForm.loremSelect1">
+              <option data-ng-repeat="option in options1" value="{{option}}">{{option}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="lorem-select2-block input-block">
+          <div class="title-column">
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="input-column">
+            <select name="lorem-select2" id="lorem-select2" data-ng-model="contactForm.loremSelect2">
+              <option data-ng-repeat="option in options2" value="{{option}}">{{option}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="about-yourself-block input-block">
+          <div class="title-column">
+            <span>About Yourself</span>
+          </div>
+          <div class="input-column">
+            <textarea name="aboutYourself" id="about-yourself" rows="5" placeholder="About Yourself" data-ng-model="contactForm.aboutYourself" data-ng-class="{'has-error': contact.$submitted && contact.aboutYourself.$pristine || contact.aboutYourself.$error.required && !contact.aboutYourself.$pristine}" required></textarea>
+            <span class="error-message" data-ng-show="contact.$submitted && contact.aboutYourself.$pristine || contact.aboutYourself.$error.required && !contact.aboutYourself.$pristine">Required field!</span>
+          </div>
+        </div>
+        <div class="nickname-block input-block">
+          <div class="title-column">
+            <span>Nickname</span>
+          </div>
+          <div class="input-column">
+            <input type="text" placeholder="NickName" data-ng-model="contactForm.nickName">
+            <button>Check</button>
+          </div>
+        </div>
+        <div class="email-block input-block">
+          <div class="title-column">
+            <span>Email</span>
+          </div>
+          <div class="input-column">
+            <input type="email" id="email" placeholder="Email" name="email" data-ng-model="contactForm.email" data-ng-class="{'has-error': contact.$submitted && contact.email.$pristine || contact.email.$error.required && !contact.email.$pristine || contact.email.$error.email && !contact.email.$pristine}" required>
+            <label for="email" data-ng-class="{'email-accept': !contact.email.$error.email && !contact.email.$pristine}"></label>
+            <div class="email-error-messages">
+              <span class="error-message" data-ng-show="contact.$submitted && contact.email.$pristine || contact.email.$error.required && !contact.email.$pristine">Required field!</span>
+              <span class="error-message" data-ng-show="contact.email.$error.email && !contact.email.$pristine">Enter a valid email!</span>
+            </div>
+            <div class="otp-block">
+              <input type="text" id="otp">
+              <button id="submit-otp">Submit</button>
+              <button id="resend-otp">Resend OTP</button>
+            </div>
+          </div>
+        </div>
+        <div class="phone-number-block input-block">
+          <div class="title-column">
+            <span>Phone Number</span>
+          </div>
+          <div class="input-column">
+            <input type="text" id="phone" placeholder="+375 XX XXXXXXX" data-ng-model="contactForm.phoneNumber">
+            <button>Check</button>
+          </div> 
+        </div>
+        <div class="input-block">
+          <div class="title-column">
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="input-column">
+            <input type="text" placeholder="Lorem" data-ng-model="contactForm.loremInput1">
+          </div>
+        </div>
+        <div class="lorem-select3-block input-block">
+          <div class="title-column">
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="input-column">
+            <select name="lorem-select3" id="lorem-select3" data-ng-model="contactForm.loremSelect3">
+              <option data-ng-repeat="option in options3" value="{{option}}">{{option}}</option>
+            </select>
+            <span class="lorem-select-title">Lorem Ipsum</span>
+            <select name="lorem-select4" id="lorem-select4" data-ng-model="contactForm.loremSelect4">
+              <option data-ng-repeat="option in options4" value="{{option}}">{{option}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="lorem-select5-block input-block">
+          <div class="title-column">
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="input-column">
+            <select name="lorem-select5" id="lorem-select5" data-ng-model="contactForm.loremSelect5">
+              <option data-ng-repeat="option in options5" value="{{option}}">{{option}}</option>
+            </select>
+            <span class="lorem-select-title">Lorem Ipsum</span>
+            <select name="lorem-select6" id="lorem-select6" data-ng-model="contactForm.loremSelect6">
+              <option data-ng-repeat="option in options6" value="{{option}}">{{option}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="who-is-better-block input-block">
+          <div class="title-column">
+            <span>Who is better?</span>
+          </div>
+          <div class="input-column">
+            <input type="radio" name="who-is-better" id="cats" value="cats" data-ng-model="contactForm.catsOrDogs">
+            <label for="cats">Cats</label>
+            <input type="radio" name="who-is-better" id="dogs" value="dogs" data-ng-model="contactForm.catsOrDogs">
+            <label for="dogs">Dogs</label>
+          </div>
+        </div>
+        <div class="load-image-block input-block">
+          <div class="title-column">
+            <span>Load Image</span>
+          </div>
+          <div class="input-column">
+            <input type="file" name="load-image" id="load-image" data-ng-model="contactForm.image">
+            <label for="load-image">+ Load Image</label>
+          </div>
+        </div>
+        <div class="input-block">
+          <div class="title-column">
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="input-column">
+            <input type="text" placeholder="Lorem" data-ng-model="contactForm.loremInput2">
+          </div>
+        </div>
+        <div class="input-block">
+          <div class="title-column">
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="input-column">
+            <input type="text" placeholder="Lorem" data-ng-model="contactForm.loremInput3">
+          </div>
+        </div>
+        <div class="input-block">
+          <div class="title-column">
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="input-column">
+            <input type="text" placeholder="Lorem" data-ng-model="contactForm.loremInput4">
+          </div>
+        </div>
+        <div class="input-block">
+          <div class="title-column">
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="input-column">
+            <input type="text" placeholder="Lorem" data-ng-model="contactForm.loremInput5"> 
+          </div>
+        </div>
+        <button type="submit" class="submit-form" data-ng-class="{'disabled-submit-button': contact.$invalid}">Lorem</button>
+      </form>
+    </div>
+  </div>
+</div>
